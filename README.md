@@ -8,7 +8,8 @@
 This is a classic Tic Tac Toe game implemented in [language/technology used, e.g., Python, JavaScript]. The game allows two players to take turns marking a 3x3 grid with 'X' and 'O', aiming to get three of their marks in a row horizontally, vertically, or diagonally.
 
 ## Features
-![Captura de pantalla 2024-07-26 220652](https://github.com/user-attachments/assets/1aad140f-3bcc-4421-8fdc-a0a85de588bd)
+![Captura de pantalla 2024-07-26 220652](https://github.com/user-attachments/assets/1aad140f-3bcc-4421-8fdc-a0a85de588bd)![Captura de pantalla 2024-07-26 220736](https://github.com/user-attachments/assets/31cf2ea5-1a43-42c6-ac88-21dbadf0e457)
+
 
 - **Two Player Mode**: Play against a friend.
 - **Interactive Grid**: Click or tap to place your mark.
