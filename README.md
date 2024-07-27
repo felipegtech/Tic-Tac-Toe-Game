@@ -4,13 +4,11 @@
 
 ## Overview
 
-This is a classic Tic Tac Toe game implemented in [language/technology used, e.g., Python, JavaScript]. The game allows two players to take turns marking a 3x3 grid with 'X' and 'O', aiming to get three of their marks in a row horizontally, vertically, or diagonally.
+This is a classic Tic Tac Toe game implemented in HTML, CSS , JavaScript. The game allows two players to take turns marking a 3x3 grid with 'X' and 'O', aiming to get three of their marks in a row horizontally, vertically, or diagonally.
 
 ## Features
 ![Captura de pantalla 2024-07-26 220652](https://github.com/user-attachments/assets/1aad140f-3bcc-4421-8fdc-a0a85de588bd)![Captura de pantalla 2024-07-26 220736](https://github.com/user-attachments/assets/31cf2ea5-1a43-42c6-ac88-21dbadf0e457)
 
-
-- **Two Player Mode**: Play against a friend.
 - **Interactive Grid**: Click or tap to place your mark.
 - **Win Detection**: The game detects when a player wins or if the game ends in a draw.
 - **Restart Option**: Start a new game without refreshing the page.
@@ -30,8 +28,7 @@ To run this project locally, follow these steps:
     ```
 
 3. **Run the Game:**
-    - For a web-based game, open `index.html` in your web browser.
-    - For other languages, follow specific instructions (e.g., `python game.py` for Python).
+    - open `index.html` in your web browser.
 
 ## Usage
 
@@ -46,9 +43,7 @@ To run this project locally, follow these steps:
 
 ## Technologies Used
 
-- **Language/Framework**: [e.g., Python, JavaScript, React]
-- **Libraries**: [e.g., jQuery, Pygame]
-- **Other Tools**: [e.g., Git, GitHub]
+- HTML, CSS , JS.
 
 ## Contributing
 
@@ -72,8 +67,3 @@ Feel free to submit issues or pull requests. For significant changes, please ope
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to [source of inspiration or tutorials] for guidance and support.
-- [Any other acknowledgments]
