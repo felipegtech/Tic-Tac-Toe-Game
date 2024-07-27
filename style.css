@@ -1,0 +1,242 @@
+   /* Basic reset */
+   body, html {
+    background-color: #ffffff81;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Ensure body is the reference for absolute positioning */
+}
+
+/* Container should cover the full screen */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; /* Ensure container covers the full viewport width */
+    position: relative; /* Ensure floating circles are positioned relative to this */
+    z-index: 1; /* Ensure container is above the floating circles */
+}
+
+#Main-title {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    z-index: 2; /* Ensure button is above the circles */
+}
+
+#start-button::before {
+    content: '▶';
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#start-button:hover {
+    background: linear-gradient(45deg, #0056b3, #004080);
+    transform: translateY(-2px);
+}
+
+#start-button:active {
+    background: linear-gradient(45deg, #004080, #003366);
+    transform: translateY(1px);
+}
+
+#restart-button {
+    display: none; /* Initially hidden */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: translateY(-2px);
+}
+
+#restart-button:active {
+    background: linear-gradient(45deg, #1e7e34, #1c7430);
+    transform: translateY(1px);
+}
+
+/* Floating circles styling */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none; /* Prevent circles from interfering with other elements */
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Different sizes and colors for circles */
+.circle1 {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6f61;
+    top: 10%;
+    left: 10%;
+    animation: float 6s infinite;
+}
+
+.circle2 {
+    width: 75px;
+    height: 75px;
+    background-color: #6a1b9a;
+    top: 30%;
+    left: 70%;
+    animation: float 8s infinite;
+}
+
+.circle3 {
+    width: 100px;
+    height: 100px;
+    background-color: #43a047;
+    top: 60%;
+    left: 30%;
+    animation: float 10s infinite;
+}
+
+.circle4 {
+    width: 80px;
+    height: 80px;
+    background-color: #ffeb3b;
+    top: 80%;
+    left: 50%;
+    animation: float 7s infinite;
+}
+
+/* Tic-Tac-Toe board styling */
+#tic-tac-toe-board {
+    display: none; /* Initially hidden */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    border: 2px solid #333;
+    margin-top: 20px;
+    position: relative;
+    width: 320px; /* Fixed width for the board */
+    height: 320px; /* Fixed height for the board */
+    border-radius: 12px; /* Rounded corners for the board */
+    background: #f9f9f9; /* Light background for the board */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for the board */
+}
+
+/* Cell styling */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em; /* Larger font size for better visibility */
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    background: #fff; /* White background for the cells */
+    border-radius: 8px; /* Rounded corners for the cells */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the cells */
+}
+
+.cell:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cell.x {
+    color: #007bff; /* Blue color for 'X' */
+    font-family: 'Lobster', cursive; /* Stylish font for 'X' */
+}
+
+.cell.o {
+    color: #ff6f61; /* Orange color for 'O' */
+    font-family: 'Roboto', sans-serif; /* Clean font for 'O' */
+}
+
+/* Modal for winner announcement */
+#winner-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Ensure modal is above other content */
+}
+
+#winner-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+}
+
+#winner-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#winner-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#winner-button:hover {
+    background: linear-gradient(45deg, #0056b3, #004080);
+    transform: translateY(-2px);
+}
+
+#winner-button:active {
+    background: linear-gradient(45deg, #004080, #003366);
+    transform: translateY(1px);
+}

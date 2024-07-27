@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Toc Toe</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Import Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="Main-title">Tic Tac Toe Game</h1>
+        <button id="start-button">START!</button>
+        <button id="restart-button">RESTART MATCH</button>
+        <div id="tic-tac-toe-board">
+            <!-- Cells for the Tic-Tac-Toe board -->
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <!-- Floating circles -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+    </div>
+
+    <!-- Modal for winner announcement -->
+    <div id="winner-modal">
+        <div id="winner-content">
+            <div id="winner-message">Player X wins!</div>
+            <button id="winner-button">OK</button>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
