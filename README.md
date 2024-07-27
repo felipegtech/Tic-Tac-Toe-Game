@@ -38,7 +38,8 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-![Game Screenshot](path/to/your/screenshot.png)
+![Captura de pantalla 2024-07-27 142004](https://github.com/user-attachments/assets/4927aa18-9045-447a-9c15-b600f9b7f005)
+
 
 ## Technologies Used
 
