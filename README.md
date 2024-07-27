@@ -1,7 +1,6 @@
 # Tic Tac Toe Game
 
-![Tic Tac Toe Screenshot] 
-<img src="C:\Users\LCD\Pictures\Screenshots\Captura de pantalla 2024-07-26 220652.png">
+![Captura de pantalla 2024-07-26 220652](https://github.com/user-attachments/assets/1aad140f-3bcc-4421-8fdc-a0a85de588bd)![Captura de pantalla 2024-07-26 220736](https://github.com/user-attachments/assets/31cf2ea5-1a43-42c6-ac88-21dbadf0e457)
 
 ## Overview
 
