@@ -1,6 +1,7 @@
 # Tic Tac Toe Game
 
-![Tic Tac Toe Screenshot]("C:\Users\LCD\Pictures\Screenshots\Captura de pantalla 2024-07-26 220652.png")
+![Tic Tac Toe Screenshot] 
+<img src="C:\Users\LCD\Pictures\Screenshots\Captura de pantalla 2024-07-26 220652.png">
 
 ## Overview
 
